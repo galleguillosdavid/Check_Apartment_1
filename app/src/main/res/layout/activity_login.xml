@@ -7,28 +7,29 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/et2"
+        android:id="@+id/etE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="78dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/et2"
+        android:hint="@string/etE"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/et1"
-        app:layout_constraintStart_toStartOf="@+id/et1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et1"
+        android:id="@+id/etP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="253dp"
+        android:layout_marginTop="212dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/et1"
+        android:hint="@string/etP"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,11 +37,12 @@
         android:id="@+id/boton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="235dp"
+        android:layout_marginBottom="160dp"
         android:hint="@string/boton1"
         android:onClick="login"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

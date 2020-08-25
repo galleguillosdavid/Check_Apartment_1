@@ -2,6 +2,7 @@ package com.example.checkapartment1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,8 +17,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        etn = findViewById(R.id.et2);
-        etp = findViewById(R.id.et1);
+        etn = findViewById(R.id.etE);
+        etp = findViewById(R.id.etP);
 
     }
     public void login(View view){
@@ -37,9 +38,13 @@ public class LoginActivity extends AppCompatActivity {
 
         }
         if(email.length()!=0 && pass.equals("123Pass")){
-            Toast.makeText(this,"Bienvenido denuevo"+ email, Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Bienvenido denuevo "+ email, Toast.LENGTH_LONG).show();
+            intentP(view);
         }
 
     }
-
+public void intentP(View view){
+        Intent intent = new Intent(view.getContext(),MainActivity.class);
+        startActivity(intent);
+}
 }
