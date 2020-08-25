@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             popup="";
 
         }
-        if(email.length()!=0 && pass.equals("123Pass")){
+        if(email.length()!=0 && pass.equals("1")){
             Toast.makeText(this,"Bienvenido denuevo "+ email, Toast.LENGTH_LONG).show();
             intentP(view);
         }

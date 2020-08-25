@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.checkapartment1.Model.Apartment;
 import com.example.checkapartment1.databinding.ItemViewOneDepBinding;
 
 import java.util.List;

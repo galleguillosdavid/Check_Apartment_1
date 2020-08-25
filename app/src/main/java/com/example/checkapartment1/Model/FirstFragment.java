@@ -12,8 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.checkapartment1.R;
 import com.example.checkapartment1.adapter.ItemAdapter;
 import com.example.checkapartment1.databinding.FragmentFirstBinding;
-
-import static com.example.checkapartment1.adapter.Apartment.apartmentList;
+import static com.example.checkapartment1.Model.ApartmentData.apartmentList;
 
 
 public class FirstFragment extends Fragment {
