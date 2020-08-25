@@ -4,18 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.checkapartment1.R;
 import com.example.checkapartment1.adapter.ItemAdapter;
 import com.example.checkapartment1.databinding.FragmentFirstBinding;
 
 import static com.example.checkapartment1.adapter.Apartment.apartmentList;
+
 
 public class FirstFragment extends Fragment {
 

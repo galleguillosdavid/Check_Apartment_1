@@ -44,6 +44,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.WordViewHolder
 
         private TextView textView;
         private ImageView imageView;
+        private  String string;
 
         public WordViewHolder(@NonNull ItemViewOneDepBinding mBinding) {
             super(mBinding.getRoot());
