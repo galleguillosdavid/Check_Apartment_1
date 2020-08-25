@@ -1,7 +1,9 @@
-package com.example.checkapartment1;
+package com.example.checkapartment1.Model;
 
 import android.os.Bundle;
 
+import com.example.checkapartment1.R;
+import com.example.checkapartment1.databinding.FragmentFirstBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 

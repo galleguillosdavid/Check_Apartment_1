@@ -1,4 +1,4 @@
-package com.example.checkapartment1;
+package com.example.checkapartment1.Model;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.checkapartment1.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -44,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 public void intentP(View view){
-        Intent intent = new Intent(view.getContext(),MainActivity.class);
+        Intent intent = new Intent(view.getContext(), MainActivity.class);
         startActivity(intent);
 }
 }
