@@ -5,38 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="0dp">
 
-        <TextView
-            android:id="@+id/xtv_proyecto"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="@string/xtv_proyecto"
-            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/xtv_proyecto"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="9dp"
+        android:text="@string/xtv_proyecto"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/xtv_unidad"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="@string/xtv_unidad" />
+    <TextView
+        android:id="@+id/xtv_unidad"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="9dp"
+        android:text="@string/xtv_unidad"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xtv_proyecto" />
 
-        <TextView
-            android:id="@+id/xtv_direccion"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/xtv_direccion" />
+    <TextView
+        android:id="@+id/xtv_direccion"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="9dp"
+        android:text="@string/xtv_direccion"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xtv_unidad" />
 
-        <ImageView
-            android:id="@+id/xiv_url"
-            android:layout_width="286dp"
-            android:layout_height="100dp"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    <ImageView
+        android:id="@+id/xiv_url"
+        android:layout_width="136dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="1dp"
+        android:contentDescription="@string/imagen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

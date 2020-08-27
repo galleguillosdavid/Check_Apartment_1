@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 import com.example.checkapartment1.Model.Apartment;
 import com.example.checkapartment1.databinding.ItemViewOneDepBinding;
 import java.util.List;
@@ -46,7 +48,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.WordViewHolder
         Apartment mUrl = wordList.get(position);
         String mTextoUrl = mUrl.getUrlImageBuilding();
         //holder.jiv_url.setImageURI();
-
+        Glide.with(holder.itemView.getContext()).load(mUrl.getUrlImageBuilding()).into(holder.jiv_url);
     }
 
     @Override
