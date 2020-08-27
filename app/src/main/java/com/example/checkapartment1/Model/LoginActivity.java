@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etn, etp;
     private String popup;
+    private int contador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,11 @@ public class LoginActivity extends AppCompatActivity {
         //almaceno lo que el usuario escribe en el campo de la vista
         String email=etn.getText().toString();
         String pass=etp.getText().toString();
+        contador ++;
+
+        if (contador>3){
+
+        }
 
         if(email.length() == 0){
             popup="Corrige lo siguiente:\nEscribe un email";

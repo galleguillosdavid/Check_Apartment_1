@@ -15,7 +15,7 @@ import com.example.checkapartment1.databinding.FragmentFirstBinding;
 import static com.example.checkapartment1.Model.ApartmentData.apartmentList;
 
 
-public class FirstFragment extends Fragment {
+public class FirstFragment extends Fragment implements ItemAdapter.PassElementSelect {
 
     private FragmentFirstBinding mBinding;
     private RecyclerView mRecyclerView;
@@ -27,10 +27,10 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        mBinding = FragmentFirstBinding.inflate(inflater,container,false);
+        mBinding = FragmentFirstBinding.inflate(inflater, container, false);
 
         mRecyclerView = mBinding.myRecycler;
-        mItemAdapter = new ItemAdapter(apartmentList());
+        mItemAdapter = new ItemAdapter(apartmentList(), this);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter(mItemAdapter);
 
@@ -41,12 +41,19 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
-            @Override
+       /* view.findViewById(R.id.boton1).setOnClickListener(new View.OnClickListener() {
+           @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
-        });
+        });*/
     }
-}
+
+        @Override
+        public void passElement(Apartment apartment){
+            // Toast.makeText(getContext(), apartment.getUrlImageBuilding(), Toast.LENGTH_SHORT).show();
+            NavHostFragment.findNavController(FirstFragment.this)
+                    .navigate(R.id.action_FirstFragment_to_SecondFragment);
+        }
+    }

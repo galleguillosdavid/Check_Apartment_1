@@ -1,23 +1,24 @@
 package com.example.checkapartment1.adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.checkapartment1.Model.Apartment;
 import com.example.checkapartment1.databinding.ItemViewOneDepBinding;
-
 import java.util.List;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.WordViewHolder> {
     private List<Apartment>wordList;
+    private PassElementSelect mListener;
 
-    public ItemAdapter(List<Apartment> wordList) {
+
+    public ItemAdapter(List<Apartment> wordList, PassElementSelect mListener) {
         this.wordList = wordList;
+        this.mListener = mListener;
     }
 
     @NonNull
@@ -30,8 +31,22 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.WordViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull WordViewHolder holder, int position) {
-        String mWord = String.valueOf(wordList.get(position));
-        holder.textView.setText(mWord);
+        Apartment mProyecto = wordList.get(position);
+        String mTextoProyecto = mProyecto.getBuildingName();
+        holder.jtv_proyecto.setText(mTextoProyecto);
+
+        Apartment mUnidad = wordList.get(position);
+        String mTextoUnidad = mUnidad.getUnitId();
+        holder.jtv_unidad.setText(mTextoUnidad);
+
+        Apartment mDireccion = wordList.get(position);
+        String mTextoDireccion = mDireccion.getAddress();
+        holder.jtv_direccion.setText(mTextoDireccion);
+
+        Apartment mUrl = wordList.get(position);
+        String mTextoUrl = mUrl.getUrlImageBuilding();
+        //holder.jiv_url.setImageURI();
+
     }
 
     @Override
@@ -40,19 +55,41 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.WordViewHolder
         return wordList.size();
     }
 
+ /*   @Override
+    public void onClick(View view) {
+    //mListener.passElement(wordList.get(null());
+        // mListener.passElement(mListener.get(getItemCount()));
+        ;
+    }
+*/
+    public interface PassElementSelect {
+        void passElement (Apartment apartment);
+    }
 
-    public class WordViewHolder extends RecyclerView.ViewHolder {//DepartamentosView Holder
 
-        private TextView textView;
-        private ImageView imageView;
-        private  String string;
+    public class WordViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {//DepartamentosView Holder
+
+        private TextView  jtv_proyecto   ;
+        private TextView  jtv_unidad     ;
+        private TextView  jtv_direccion  ;
+        private ImageView jiv_url        ;
+
 
         public WordViewHolder(@NonNull ItemViewOneDepBinding mBinding) {
             super(mBinding.getRoot());
             //super(itemView);
-            textView = mBinding.wordTv;
-
+            jtv_proyecto  = mBinding.xtvProyecto    ;
+            jtv_unidad    = mBinding.xtvUnidad      ;
+            jtv_direccion = mBinding.xtvDireccion   ;
+            jiv_url       = mBinding.xivUrl         ;
+            itemView.setOnClickListener((View.OnClickListener) this);
         }
 
+        @Override
+        public void onClick(View view) {
+            mListener.passElement(wordList.get(getAdapterPosition()));
+        }
     }
+
+
 }

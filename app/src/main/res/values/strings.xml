@@ -11,4 +11,8 @@
     <string name="etE">Email</string>
     <string name="etP">Contraseña</string>
     <string name="boton1">Ingresar</string>
+    <string name="xtv_proyecto">Proyecto</string>
+    <string name="xtv_unidad">Unidad</string>
+    <string name="xtv_direccion">Direccion</string>
+    <string name="xiv_url">Url</string>
 </resources>

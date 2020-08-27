@@ -5,19 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="0dp"
-        android:layout_height="205dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/word_tv"
-            android:layout_width="match_parent"
+            android:id="@+id/xtv_proyecto"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/xtv_proyecto"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/xtv_unidad"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/xtv_unidad" />
+
+        <TextView
+            android:id="@+id/xtv_direccion"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="tv2" />
-    </androidx.cardview.widget.CardView>
+            android:text="@string/xtv_direccion" />
+
+        <ImageView
+            android:id="@+id/xiv_url"
+            android:layout_width="286dp"
+            android:layout_height="100dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
