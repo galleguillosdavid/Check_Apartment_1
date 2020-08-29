@@ -16,4 +16,12 @@
     <string name="xtv_direccion">Direccion</string>
     <string name="xiv_url">Url</string>
     <string name="imagen">imagen</string>
+    <string name="button_second">Regresar</string>
+    <string name="xtv_luces">Luces</string>
+    <string name="xtv_bano">Baño</string>
+    <string name="xtv_dormitorio">Dormitorio</string>
+    <string name="xtv_cocina">Cocina</string>
+    <string name="xtv_normal">Normal</string>
+    <string name="xtv_regular">Regular</string>
+    <string name="xtv_mala">Mala</string>
 </resources>

@@ -7,7 +7,7 @@
 
 
     <TextView
-        android:id="@+id/xtv_proyecto"
+        android:id="@+id/xtvAproyecto"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginStart="9dp"
@@ -17,27 +17,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/xtv_unidad"
+        android:id="@+id/xtvAunidad"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginStart="9dp"
         android:text="@string/xtv_unidad"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/xtv_proyecto" />
+        app:layout_constraintTop_toBottomOf="@+id/xtvAproyecto" />
 
     <TextView
-        android:id="@+id/xtv_direccion"
+        android:id="@+id/xtvdireccion"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginStart="9dp"
         android:text="@string/xtv_direccion"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/xtv_unidad" />
+        app:layout_constraintTop_toBottomOf="@+id/xtvAunidad" />
 
     <ImageView
-        android:id="@+id/xiv_url"
+        android:id="@+id/xiv_Aurl"
         android:layout_width="136dp"
         android:layout_height="85dp"
         android:layout_marginEnd="1dp"

@@ -6,22 +6,190 @@
     android:layout_height="match_parent"
     tools:context=".Model.SecondFragment">
 
-    <TextView
-        android:id="@+id/textview_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="168dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/xtvSproyecto"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
 
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/previous"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="157dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/xtvSdireccion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/xtv_direccion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/xtvSunidad" />
+
+        <TextView
+            android:id="@+id/xtvSproyecto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/xtv_proyecto"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="1dp" />
+
+        <TextView
+            android:id="@+id/xtvSunidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:text="@string/xtv_unidad"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/xtvSproyecto" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="343dp"
+        android:layout_height="319dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <RadioGroup
+            android:id="@+id/radioGroup4"
+            android:layout_width="139dp"
+            android:layout_height="212dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="112dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <CheckBox
+                android:id="@+id/xtv_normal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/xtv_normal" />
+
+            <CheckBox
+                android:id="@+id/xtv_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xtv_regular" />
+
+            <CheckBox
+                android:id="@+id/xtv_mala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xtv_mala" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup3"
+            android:layout_width="140dp"
+            android:layout_height="212dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="114dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <CheckBox
+                android:id="@+id/xtv_luces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xtv_luces" />
+
+            <CheckBox
+                android:id="@+id/xtv_bano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xtv_bano" />
+
+            <CheckBox
+                android:id="@+id/xtv_dormitorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xtv_dormitorio" />
+
+            <CheckBox
+                android:id="@+id/xtv_cocina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xtv_cocina" />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="348dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+        <Button
+            android:id="@+id/button_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="44dp"
+            android:text="@string/previous"
+            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,8 +52,12 @@ public class FirstFragment extends Fragment implements ItemAdapter.PassElementSe
 
         @Override
         public void passElement(Apartment apartment){
+           Bundle contenedor = new Bundle();
+           contenedor.putString("imagen",apartment.getUrlImageBuilding());
+            contenedor.putString("nombre",apartment.getBuildingName());
+            contenedor.putString("unidad",apartment.getUnitId());
             // Toast.makeText(getContext(), apartment.getUrlImageBuilding(), Toast.LENGTH_SHORT).show();
             NavHostFragment.findNavController(FirstFragment.this)
-                    .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                    .navigate(R.id.action_FirstFragment_to_SecondFragment,contenedor);
         }
     }

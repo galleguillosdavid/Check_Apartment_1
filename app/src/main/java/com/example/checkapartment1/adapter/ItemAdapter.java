@@ -80,10 +80,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.WordViewHolder
         public WordViewHolder(@NonNull ItemViewOneDepBinding mBinding) {
             super(mBinding.getRoot());
             //super(itemView);
-            jtv_proyecto  = mBinding.xtvProyecto    ;
-            jtv_unidad    = mBinding.xtvUnidad      ;
-            jtv_direccion = mBinding.xtvDireccion   ;
-            jiv_url       = mBinding.xivUrl         ;
+            jtv_proyecto  = mBinding.xtvAproyecto    ;
+            jtv_unidad    = mBinding.xtvAunidad      ;
+            jtv_direccion = mBinding.xtvAunidad   ;
+            jiv_url       = mBinding.xivAurl         ;
             itemView.setOnClickListener((View.OnClickListener) this);
         }
 
